@@ -6,7 +6,7 @@ This ReadME file contains information on how to install and run the application,
 
 ## Design
 
-The detailed design of the WordProcessor application can be found on the [Design Page](.docs/DESIGN.md).
+The detailed design of the WordProcessor application can be found on the [Design Page](docs/DESIGN.md).
 
 ## CHANGELOG
 
