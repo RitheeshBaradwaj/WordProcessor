@@ -1,0 +1,144 @@
+$ ./build.sh -c
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Check if compiler accepts -pthread
+-- Check if compiler accepts -pthread - yes
+-- Found GTest: /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfig.cmake (found version "1.9.0")
+sources:Word_UT.cpp;/home/user/practice/buggy-challenge/src/wordtool/word.cpp
+sources:SafeQueue_UT.cpp;/home/user/practice/buggy-challenge/src/wordtool/word.cpp;/home/user/practice/buggy-challenge/src/wordtool/safe_queue.cpp
+sources:WordList_UT.cpp;/home/user/practice/buggy-challenge/src/wordtool/word.cpp;/home/user/practice/buggy-challenge/src/wordtool/word_list.cpp
+sources:WordProcessor_UT.cpp;/home/user/practice/buggy-challenge/src/wordtool/word.cpp;/home/user/practice/buggy-challenge/src/wordtool/word_list.cpp;/home/user/practice/buggy-challenge/src/wordtool/safe_queue.cpp;/home/user/practice/buggy-challenge/src/wordtool/word_processor.cpp
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/user/practice/buggy-challenge/_build
+[  4%] Building CXX object CMakeFiles/WordProcessor.dir/src/wordtool/main.cpp.o
+[  8%] Building CXX object CMakeFiles/WordProcessor.dir/src/wordtool/safe_queue.cpp.o
+[ 13%] Building CXX object CMakeFiles/WordProcessor.dir/src/wordtool/word.cpp.o
+[ 17%] Building CXX object CMakeFiles/WordProcessor.dir/src/wordtool/word_list.cpp.o
+[ 21%] Building CXX object CMakeFiles/WordProcessor.dir/src/wordtool/word_processor.cpp.o
+[ 26%] Linking CXX executable ../_bin/bin/WordProcessor
+[ 26%] Built target WordProcessor
+[ 30%] Building CXX object tests/Word_UT/CMakeFiles/Word_UT.dir/Word_UT.cpp.o
+[ 34%] Building CXX object tests/Word_UT/CMakeFiles/Word_UT.dir/__/__/src/wordtool/word.cpp.o
+[ 39%] Linking CXX executable ../../../_bin/tests/bin/Word_UT
+[ 39%] Built target Word_UT
+[ 43%] Building CXX object tests/SafeQueue_UT/CMakeFiles/SafeQueue_UT.dir/SafeQueue_UT.cpp.o
+[ 47%] Building CXX object tests/SafeQueue_UT/CMakeFiles/SafeQueue_UT.dir/__/__/src/wordtool/word.cpp.o
+[ 52%] Building CXX object tests/SafeQueue_UT/CMakeFiles/SafeQueue_UT.dir/__/__/src/wordtool/safe_queue.cpp.o
+[ 56%] Linking CXX executable ../../../_bin/tests/bin/SafeQueue_UT
+[ 56%] Built target SafeQueue_UT
+[ 60%] Building CXX object tests/WordList_UT/CMakeFiles/WordList_UT.dir/WordList_UT.cpp.o
+[ 65%] Building CXX object tests/WordList_UT/CMakeFiles/WordList_UT.dir/__/__/src/wordtool/word.cpp.o
+[ 69%] Building CXX object tests/WordList_UT/CMakeFiles/WordList_UT.dir/__/__/src/wordtool/word_list.cpp.o
+[ 73%] Linking CXX executable ../../../_bin/tests/bin/WordList_UT
+[ 73%] Built target WordList_UT
+[ 78%] Building CXX object tests/WordProcessor_UT/CMakeFiles/WordProcessor_UT.dir/WordProcessor_UT.cpp.o
+[ 82%] Building CXX object tests/WordProcessor_UT/CMakeFiles/WordProcessor_UT.dir/__/__/src/wordtool/word.cpp.o
+[ 86%] Building CXX object tests/WordProcessor_UT/CMakeFiles/WordProcessor_UT.dir/__/__/src/wordtool/word_list.cpp.o
+[ 91%] Building CXX object tests/WordProcessor_UT/CMakeFiles/WordProcessor_UT.dir/__/__/src/wordtool/safe_queue.cpp.o
+[ 95%] Building CXX object tests/WordProcessor_UT/CMakeFiles/WordProcessor_UT.dir/__/__/src/wordtool/word_processor.cpp.o
+[100%] Linking CXX executable ../../../_bin/tests/bin/WordProcessor_UT
+[100%] Built target WordProcessor_UT
+Running tests...
+Test project /home/user/practice/buggy-challenge/_build
+    Start 1: Word_UT
+1/4 Test #1: Word_UT ..........................   Passed    0.01 sec
+    Start 2: SafeQueue_UT
+2/4 Test #2: SafeQueue_UT .....................   Passed    0.51 sec
+    Start 3: WordList_UT
+3/4 Test #3: WordList_UT ......................   Passed    0.00 sec
+    Start 4: WordProcessor_UT
+4/4 Test #4: WordProcessor_UT .................   Passed    3.01 sec
+
+100% tests passed, 0 tests failed out of 4
+
+Total Test time (real) =   3.53 sec
+Capturing coverage data from /home/user/practice/buggy-challenge/_build
+Found gcov version: 9.4.0
+Using intermediate gcov format
+Scanning /home/user/practice/buggy-challenge/_build for .gcno files ...
+Found 13 graph files in /home/user/practice/buggy-challenge/_build
+Processing SafeQueue_UT/CMakeFiles/SafeQueue_UT.dir/SafeQueue_UT.cpp.gcno
+Processing SafeQueue_UT/CMakeFiles/SafeQueue_UT.dir/__/__/src/wordtool/safe_queue.cpp.gcno
+Processing SafeQueue_UT/CMakeFiles/SafeQueue_UT.dir/__/__/src/wordtool/word.cpp.gcno
+Processing WordList_UT/CMakeFiles/WordList_UT.dir/WordList_UT.cpp.gcno
+Processing WordList_UT/CMakeFiles/WordList_UT.dir/__/__/src/wordtool/word_list.cpp.gcno
+Processing WordList_UT/CMakeFiles/WordList_UT.dir/__/__/src/wordtool/word.cpp.gcno
+Processing WordProcessor_UT/CMakeFiles/WordProcessor_UT.dir/__/__/src/wordtool/word_processor.cpp.gcno
+Processing WordProcessor_UT/CMakeFiles/WordProcessor_UT.dir/__/__/src/wordtool/word_list.cpp.gcno
+Processing WordProcessor_UT/CMakeFiles/WordProcessor_UT.dir/__/__/src/wordtool/safe_queue.cpp.gcno
+Processing WordProcessor_UT/CMakeFiles/WordProcessor_UT.dir/__/__/src/wordtool/word.cpp.gcno
+Processing WordProcessor_UT/CMakeFiles/WordProcessor_UT.dir/WordProcessor_UT.cpp.gcno
+Processing Word_UT/CMakeFiles/Word_UT.dir/Word_UT.cpp.gcno
+Processing Word_UT/CMakeFiles/Word_UT.dir/__/__/src/wordtool/word.cpp.gcno
+Excluded data for 51 files due to include/exclude options
+Finished .info-file creation
+Test project /home/user/practice/buggy-challenge/_build/tests
+    Start 1: Word_UT
+1/4 Test #1: Word_UT ..........................   Passed    0.01 sec
+    Start 2: SafeQueue_UT
+2/4 Test #2: SafeQueue_UT .....................   Passed    0.51 sec
+    Start 3: WordList_UT
+3/4 Test #3: WordList_UT ......................   Passed    0.00 sec
+    Start 4: WordProcessor_UT
+4/4 Test #4: WordProcessor_UT .................   Passed    3.02 sec
+
+100% tests passed, 0 tests failed out of 4
+
+Total Test time (real) =   3.54 sec
+Capturing coverage data from /home/user/practice/buggy-challenge/_build
+Found gcov version: 9.4.0
+Using intermediate gcov format
+Scanning /home/user/practice/buggy-challenge/_build for .gcda files ...
+Found 13 data files in /home/user/practice/buggy-challenge/_build
+Processing SafeQueue_UT/CMakeFiles/SafeQueue_UT.dir/__/__/src/wordtool/safe_queue.cpp.gcda
+Processing SafeQueue_UT/CMakeFiles/SafeQueue_UT.dir/__/__/src/wordtool/word.cpp.gcda
+Processing SafeQueue_UT/CMakeFiles/SafeQueue_UT.dir/SafeQueue_UT.cpp.gcda
+Processing WordList_UT/CMakeFiles/WordList_UT.dir/__/__/src/wordtool/word_list.cpp.gcda
+Processing WordList_UT/CMakeFiles/WordList_UT.dir/__/__/src/wordtool/word.cpp.gcda
+Processing WordList_UT/CMakeFiles/WordList_UT.dir/WordList_UT.cpp.gcda
+Processing WordProcessor_UT/CMakeFiles/WordProcessor_UT.dir/__/__/src/wordtool/safe_queue.cpp.gcda
+Processing WordProcessor_UT/CMakeFiles/WordProcessor_UT.dir/__/__/src/wordtool/word_list.cpp.gcda
+Processing WordProcessor_UT/CMakeFiles/WordProcessor_UT.dir/__/__/src/wordtool/word_processor.cpp.gcda
+Processing WordProcessor_UT/CMakeFiles/WordProcessor_UT.dir/__/__/src/wordtool/word.cpp.gcda
+Processing WordProcessor_UT/CMakeFiles/WordProcessor_UT.dir/WordProcessor_UT.cpp.gcda
+Processing Word_UT/CMakeFiles/Word_UT.dir/__/__/src/wordtool/word.cpp.gcda
+Processing Word_UT/CMakeFiles/Word_UT.dir/Word_UT.cpp.gcda
+Excluded data for 51 files due to include/exclude options
+Finished .info-file creation
+Combining tracefiles.
+Reading tracefile cov_before.info
+Reading tracefile cov_after.info
+Writing data to cov.info
+Summary coverage rate:
+  lines......: 98.5% (329 of 334 lines)
+  functions..: 100.0% (159 of 159 functions)
+  branches...: no data found
+Reading data file cov.info
+Found 8 entries.
+Found common filename prefix "/home/user/practice/buggy-challenge"
+Writing .css and .png files.
+Generating output.
+Processing file src/wordtool/safe_queue.cpp
+Processing file src/wordtool/word_processor.cpp
+Processing file src/wordtool/word_list.cpp
+Processing file src/wordtool/word.cpp
+Processing file tests/SafeQueue_UT/SafeQueue_UT.cpp
+Processing file tests/WordList_UT/WordList_UT.cpp
+Processing file tests/WordProcessor_UT/WordProcessor_UT.cpp
+Processing file tests/Word_UT/Word_UT.cpp
+Writing directory view page.
+Overall coverage rate:
+  lines......: 98.5% (329 of 334 lines)
+  functions..: 100.0% (159 of 159 functions)
+Built target coverage

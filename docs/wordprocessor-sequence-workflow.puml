@@ -1,0 +1,50 @@
+@startuml
+
+actor "User" as user
+
+participant "STDIN" as in
+participant "main" as app
+participant "WordProcessor" as wp
+participant "WorkerThread" as wt
+participant "SafeQueue" as sq
+participant "WordList" as wl
+participant "STDOUT" as out
+
+user -> app
+app -> app : WordProcessor()
+wp -> wt : "starts worker thread"
+wt -> sq : WaitAndPOP()\n"waiting for element to be availble in queue"
+
+app -> wp : ReadInputWords()
+
+group read input words entered by user
+    user -> in : "enters a word..."
+    wp -> sq : Push()\n"reads user input and push to safe queue"
+    sq -> wt : Returns element\n"wakes up the workerthread"
+    wt -> wl : Inserts word into a `std::set`
+end
+
+user -> in : "enters end"
+wp -> wp : push word to queue and exists ReadInputWords()
+wt -> wl : WordList: SetEndEncountered(true) and stops
+
+app -> wp : PrintWordList()
+wp -> wl : GetWords()
+wp -> out : Print(words and each word count)
+
+app -> wp : LookupWords()
+
+group search for the word entered by user
+    user -> in : "enters a word..."
+    wp -> wl : SearchWord(word)
+    wp -> out : Print(search_result)
+end
+
+user -> in : EOF
+wp -> wp : exists LookupWords...
+
+app -> app : exits
+
+app -> user : Success
+
+@enduml
