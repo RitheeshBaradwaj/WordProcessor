@@ -1,0 +1,42 @@
+name: Build C++ Project
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cmake g++ lcov googletest
+          cd /usr/src/googletest
+          sudo cmake CMakeLists.txt
+          sudo make
+          sudo cp lib/*.a /usr/lib
+          cd ~
+
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build project
+        run: |
+          ls -al
+          chmod 755 build.sh
+          ./build.sh -c
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: wordprocessor-build
+          path: |
+            _build/
+            _bin/
+            _test_reports/
+            _test_coverage/
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: wordprocessor-build

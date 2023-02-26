@@ -4,6 +4,10 @@ The WordProcessor application is a C++ program that reads a list of ASCII words 
 
 This ReadME file contains information on how to install and run the application, as well as the application's design page.
 
+## Status
+
+[![Build WorkProcessor Project](https://github.com/RitheeshBaradwaj/WordProcessor/actions/workflows/build-cpp.yaml/badge.svg?branch=main)](https://github.com/RitheeshBaradwaj/WordProcessor/actions/workflows/build-cpp.yaml)
+
 ## Design
 
 The detailed design of the WordProcessor application can be found on the [Design Page](docs/DESIGN.md).
@@ -31,14 +35,53 @@ All the test results including binaries, unit test results, code coverage report
 
 * [Run Steps](README.md#run-steps)
 
+## Install Build Dependencies
+
+The following are the steps to install dependencies for Wordprocessor applications:
+
+1. Update the package index on your Ubuntu system:
+
+```shell
+sudo apt-get update
+```
+
+2. Install the cmake, g++ compiler, lcov coverage tool, Google Test and Google Mock libraries and headers using apt-get:
+
+```shell
+sudo apt-get install -y googletest
+```
+
+3. Once the installation is complete, navigate to the /usr/src/googletest directory:
+
+```shell
+cd /usr/src/googletest
+```
+
+4. Build the Google Test and Google Mock libraries:
+
+```shell
+sudo cmake CMakeLists.txt
+sudo make
+```
+
+5. Copy the compiled library files to the system library directory:
+
+```shell
+sudo cp lib/*.a /usr/lib
+```
+
 ## Installation Guide
 
 The following instructions explain how to install the WordProcessor application:
 
-1. Clone the repository by running git clone https://github.com/example/WordProcessor.git.
-2. Change to the project directory by running cd WordProcessor.
-3. Install the required dependencies by running `sudo apt-get install -y g++ lcov libgtest-dev`.
-4. Build the application by running `make`.
+1. Install the dependencies mentioned above.
+2. Clone the repository by running git clone https://github.com/example/WordProcessor.git.
+3. Change to the project directory by running cd WordProcessor.
+4. Build the application by running `build.sh`.
+
+```shell
+./build.sh -c
+```
 
 ## Suitable Compiler
 
