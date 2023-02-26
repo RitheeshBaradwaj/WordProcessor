@@ -25,3 +25,18 @@ jobs:
           ls -al
           chmod 755 build.sh
           ./build.sh -c
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: wordprocessor-build
+          path: |
+            _build/
+            _bin/
+            _test_reports/
+            _test_coverage/
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: wordprocessor-build
