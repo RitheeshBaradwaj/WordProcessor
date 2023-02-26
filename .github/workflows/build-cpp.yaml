@@ -7,9 +7,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
       - name: Install build dependencies
         run: |
           sudo apt-get update
@@ -18,6 +15,10 @@ jobs:
           sudo cmake CMakeLists.txt
           sudo make
           sudo find . -name '*.a' -type f -exec cp {} /usr/lib \;
+          cd ~
+
+      - name: Checkout code
+        uses: actions/checkout@v2
 
       - name: Build project
         run: |
