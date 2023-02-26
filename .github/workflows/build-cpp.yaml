@@ -16,7 +16,7 @@ jobs:
           sudo apt-get install -y cmake g++ lcov libgtest-dev
           cd /usr/src/gtest
           sudo cmake CMakeLists.txt
-          sudo make
+          sudo make install
           sudo cp *.a /usr/lib
 
       - name: Build project
