@@ -10,11 +10,11 @@ jobs:
       - name: Install build dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y cmake g++ lcov libgtest-dev
-          cd /usr/src/gtest
+          sudo apt-get install -y cmake g++ lcov googletest
+          cd /usr/src/googletest
           sudo cmake CMakeLists.txt
           sudo make
-          sudo find . -name '*.a' -type f -exec cp {} /usr/lib \;
+          sudo cp lib/*.a /usr/lib
           cd ~
 
       - name: Checkout code
@@ -22,7 +22,6 @@ jobs:
 
       - name: Build project
         run: |
-          pwd
           ls -al
           chmod 755 build.sh
           ./build.sh -c
