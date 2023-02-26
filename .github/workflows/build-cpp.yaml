@@ -22,4 +22,6 @@ jobs:
 
       - name: Build project
         run: |
+          pwd
+          ls -al
           ./build.sh -c
